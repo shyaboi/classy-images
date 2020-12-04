@@ -23,9 +23,9 @@ const classifier = ml5.imageClassifier('MobileNet', modelLoaded);
 const classy = ()=> {
       classifier.classify(img, (err, results) => {
         console.log(results);
-        guess1.innerHTML='Guess: '+results[0].label
-        guess2.innerHTML='Guess: '+results[1].label
-        guess3.innerHTML='Guess: '+results[2].label
+        guess1.innerHTML='AI Guess: '+results[0].label
+        guess2.innerHTML='AI Guess: '+results[1].label
+        guess3.innerHTML='AI Guess: '+results[2].label
         let conf1 = (results[0].confidence * 100).toFixed(0)
         let conf2 = (results[1].confidence * 100).toFixed(0)
         let conf3 = (results[2].confidence * 100).toFixed(0)
